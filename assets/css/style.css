@@ -27,10 +27,76 @@ body {
   min-height: 98vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 98vw;
+  padding: 0.5rem 2rem;
+  border-bottom: solid 0.3rem purple;
 }
 
 h1 {
   font-size: var(--fs-1);
+  margin: 1rem;
+}
+
+.customFont {
+  /* estonia-regular  */
+  font-family: "Estonia", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.flexGrow {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.centerBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.year {
+  color: red;
+}
+
+.burn {
+  font-size: var(--fs-1);
+  color: darkred;
+}
+
+.today {
+  color: magenta;
+  text-shadow: 0.2rem 0.2rem 0.8rem purple;
+}
+
+.dotw {
+  font-size: var(--fs-2);
+  color: purple;
+}
+
+.todayGlow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 7rem;
+  color: black;
+  font-size: var(--fs-1);
+  font-weight: bolder;
+  text-shadow: 0 0 1rem rgb(255, 50, 255);
+  border-radius: 100%;
+  border-left: solid 0.2rem aquamarine;
+  /* animation: glow 5s linear infinite alternate; */
+  /* box-shadow: 0 0 10rem 0.05rem rgb(29, 210, 223); */
+  /* border: solid 0.05rem rgb(0, 87, 87); */
 }
