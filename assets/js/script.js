@@ -1,6 +1,7 @@
 var today = $("#today");
 var clockEl = $("#clockEl");
 var mainEl = $("#mainEl");
+var dotwEl = $("#dotwEl");
 
 const week = ["☉", "☽", "♂︎", "☿", "♃", "♀︎", "♄"];
 
@@ -15,5 +16,23 @@ function setTime() {
   setTimeout(setTime, 1000);
 }
 
+function displayDays(days) {
+  days.forEach((day, index) => {
+    var dayNode = $("<section></section>").text(day);
+    dayNode.addClass("dotw");
+    dotwEl.append(dayNode);
+    if (index === dayjs().day()) {
+      dayNode.addClass("todayGlow");
+    }
+  });
+  startWeekMonday();
+}
+
+function startWeekMonday() {
+  var sunday = dotwEl.children().first();
+  dotwEl.append(sunday);
+}
+
 setDay();
 setTime();
+displayDays(week);
