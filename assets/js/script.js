@@ -9,4 +9,11 @@ function setDay() {
   today.text(date);
 }
 
+function setTime() {
+  var time = dayjs().format("HH:mm:ss");
+  clockEl.text(time);
+  setTimeout(setTime, 1000);
+}
+
 setDay();
+setTime();

@@ -101,6 +101,13 @@ h1 {
   /* border: solid 0.05rem rgb(0, 87, 87); */
 }
 
+.clock {
+  font-size: var(--fs-1);
+  color: rgb(0, 178, 178);
+  min-width: 22rem;
+  text-shadow: 0.2rem 0.2rem 0.8rem teal;
+}
+
 @keyframes glow {
   0% {
     text-shadow: 0 0 1rem rgb(255, 0, 174);
