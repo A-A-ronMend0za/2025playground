@@ -1,22 +1,22 @@
-var today = $("#today");
-var clockEl = $("#clockEl");
-var mainEl = $("#mainEl");
-var dotwEl = $("#dotwEl");
-
+const mainEl = $("#mainEl");
 const week = ["☉", "☽", "♂︎", "☿", "♃", "♀︎", "♄"];
 
-function setDay() {
+var today = $("#today");
+var clockEl = $("#clockEl");
+var dotwEl = $("#dotwEl");
+
+setDay = () => {
   var date = dayjs().format("dddd MMMM D");
   today.text(date);
-}
+};
 
-function setTime() {
+setTime = () => {
   var time = dayjs().format("HH:mm:ss");
   clockEl.text(time);
   setTimeout(setTime, 1000);
-}
+};
 
-function displayDays(days) {
+displayDays = (days) => {
   days.forEach((day, index) => {
     var dayNode = $("<section></section>").text(day);
     dayNode.addClass("dotw");
@@ -25,13 +25,12 @@ function displayDays(days) {
       dayNode.addClass("todayGlow");
     }
   });
+  function startWeekMonday() {
+    var sunday = dotwEl.children().first();
+    dotwEl.append(sunday);
+  }
   startWeekMonday();
-}
-
-function startWeekMonday() {
-  var sunday = dotwEl.children().first();
-  dotwEl.append(sunday);
-}
+};
 
 setDay();
 setTime();
