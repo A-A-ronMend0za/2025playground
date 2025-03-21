@@ -35,3 +35,12 @@ displayDays = (days) => {
 setDay();
 setTime();
 displayDays(week);
+
+// Things to do:
+// suffix on date
+// calendar hw
+// pokeApiWeather
+// pokeApi cardviewer
+// bois
+// Bills
+// Charting
