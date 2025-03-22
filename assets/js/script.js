@@ -1,15 +1,14 @@
 const mainEl = $("#mainEl");
 const week = ["☉", "☽", "♂︎", "☿", "♃", "♀︎", "♄"];
+const menuHeaderEl = $("#menuHeaderEl");
+const menuBtnsEl = $("#menuBtnsEl");
+const contentDisplayEl = $("#contentDisplayEl");
+const designDisplayEl = $("#designDisplayEl");
+const footerEl = $("footer");
 
 var today = $("#today");
 var clockEl = $("#clockEl");
 var dotwEl = $("#dotwEl");
-
-var menuHeaderEl = $("#menuHeaderEl");
-var menuBtnsEl = $("#menuBtnsEl");
-var contentDisplayEl = $("#contentDisplayEl");
-var designDisplayEl = $("#designDisplayEl");
-var footerEl = $("footer");
 
 setDay = () => {
   var date = dayjs().format("dddd MMMM D");
@@ -50,6 +49,7 @@ setDay();
 setTime();
 displayDays(week);
 menuWelcome();
+generatePlannerBtn();
 
 // Things to do:
 // suffix on date
