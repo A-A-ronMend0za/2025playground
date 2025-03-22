@@ -30,7 +30,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
+/* ---------------------------- */
 header {
   display: flex;
   align-items: center;
@@ -42,7 +42,7 @@ header {
 
 h1 {
   font-size: var(--fs-1);
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 .customFont {
@@ -124,4 +124,56 @@ h1 {
   100% {
     text-shadow: 0 0 1rem rgb(65, 184, 248);
   }
+}
+/* ---------------------------- */
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 97vw;
+  min-height: 80vh;
+}
+
+/* ---------------------------- */
+
+.menu {
+  display: flex;
+  flex-grow: 0;
+  flex-direction: column;
+  align-items: center;
+  width: 27rem;
+  height: 75vh;
+  margin: 2rem;
+  border: 1rem solid teal;
+  border-radius: 2rem;
+}
+
+.menuHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  border-bottom: 0.3rem solid darkgreen;
+  margin: 0.5rem;
+  color: darkgreen;
+}
+
+.menuBtns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contentDisplay {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.designDisplay {
+  display: flex;
+  flex-grow: 0;
+  height: 85vh;
+  min-width: 20rem;
+  padding: 2rem 0 0 1rem;
 }

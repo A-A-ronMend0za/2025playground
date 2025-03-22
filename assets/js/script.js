@@ -5,6 +5,12 @@ var today = $("#today");
 var clockEl = $("#clockEl");
 var dotwEl = $("#dotwEl");
 
+var menuHeaderEl = $("#menuHeaderEl");
+var menuBtnsEl = $("#menuBtnsEl");
+var contentDisplayEl = $("#contentDisplayEl");
+var designDisplayEl = $("#designDisplayEl");
+var footerEl = $("footer");
+
 setDay = () => {
   var date = dayjs().format("dddd MMMM D");
   today.text(date);
@@ -32,9 +38,18 @@ displayDays = (days) => {
   startWeekMonday();
 };
 
+menuWelcome = () => {
+  var menuWelcomeMessage = $("<h1></h1>")
+    .addClass("customFont")
+    .text("Hello Aaron");
+
+  menuHeaderEl.append(menuWelcomeMessage);
+};
+
 setDay();
 setTime();
 displayDays(week);
+menuWelcome();
 
 // Things to do:
 // suffix on date
